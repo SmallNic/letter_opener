@@ -1,9 +1,10 @@
-<h1>Inbox:</h1>
-
-<ul class="letters">
-  <%- @letters.each do |letter| %>
-    <li class="letter">
-      <%= link_to "#{letter.updated_at} - #{letter.name}", letter_opener_letter_path(letter.name, :style => 'rich') %>
-    </li>
-  <%- end %>
-</ul>
+<div class="main">
+  <h1>Inbox:</h1>
+  <ul class="letters">
+    <%- @letters.each do |letter| %>
+      <li class="letter">
+        <%= link_to "#{letter.updated_at} - #{letter.name}", letter_opener_letter_path(letter.name, :style => 'rich') %>
+      </li>
+    <%- end %>
+  </ul>
+</div>
