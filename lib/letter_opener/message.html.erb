@@ -68,6 +68,16 @@
 
     <dt>To:</dt>
     <dd><%= mail.to.join(", ") %></dd>
+
+    <% unless mail.cc.empty? %>
+      <dt>CC:</dt>
+      <dd><%= mail.cc.join(", ") %></dd>
+    <% end %>
+
+    <% unless mail.bcc.empty? %>
+      <dt>BCC:</dt>
+      <dd><%=mail.bcc.join(", ") %></dd>
+    <% end %>
   </dl>
 
   <% if mail.multipart? %>
